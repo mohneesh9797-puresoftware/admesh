@@ -4,8 +4,16 @@ matrix:
     - compiler: gcc
       os: linux
       env: EXTRA=--enable-werror
+    - compiler: gcc
+      os: linux
+      arch: arm64
+      env: EXTRA=--enable-werror
     - compiler: clang
       os: linux
+    - compiler: clang
+      os: linux
+      arch: arm64
+      
     - compiler: gcc
       os: linux
       arch: arm64
@@ -13,8 +21,14 @@ matrix:
         apt:
           packages:
           - libtool
-    - compiler: clang
-      os: osx
+    - compiler: gcc
+      os: linux
+      arch: amd64
+      addons:
+        apt:
+          packages:
+          - libtool      
+    
 
 script:
  - ./autogen.sh
