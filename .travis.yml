@@ -1,19 +1,6 @@
 language: c
 matrix:
-  include:
-    - compiler: gcc
-      os: linux
-      env: EXTRA=--enable-werror
-    - compiler: gcc
-      os: linux
-      arch: arm64
-      env: EXTRA=--enable-werror
-    - compiler: clang
-      os: linux
-    - compiler: clang
-      os: linux
-      arch: arm64
-      
+  include:      
     - compiler: gcc
       os: linux
       arch: arm64
